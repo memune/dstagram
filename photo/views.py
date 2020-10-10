@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
 from django.views.generic.detail import DetailView
 
