@@ -15,6 +15,12 @@ from django.conf.urls.static import static
 from django.conf import settings 
 import os 
 import dj_database_url
+import sys
+
+# six 패키지 수정
+sys.modules['django.utils.six.moves.urllib.parse'] = __import__('six.moves.urllib_parse', fromlist=['urlencode'])
+sys.modules['django.utils.six.moves.urllib.request'] = __import__('six.moves.urllib_request', fromlist=['urlopen'])
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
